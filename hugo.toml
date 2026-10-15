@@ -1,5 +1,5 @@
 baseURL = "https://ea8djl.com/"
-languageCode = "es-es"
+locale = "es-es"
 title = "EA8DJL · Victor Bolaños Guerra"
 theme = "PaperMod"
 enableRobotsTXT = true
