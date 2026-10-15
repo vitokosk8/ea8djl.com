@@ -1,0 +1,53 @@
+baseURL = "https://ea8djl.com/"
+languageCode = "es-es"
+title = "EA8DJL · Victor Bolaños Guerra"
+theme = "PaperMod"
+enableRobotsTXT = true
+
+[pagination]
+  pagerSize = 10
+
+[params]
+  env = "production"
+  defaultTheme = "auto"
+  mainSections = ["blog"]
+  ShowReadingTime = true
+  ShowPostNavLinks = true
+  ShowCodeCopyButtons = true
+  ShowBreadCrumbs = true
+
+  [params.profileMode]
+    enabled = true
+    title = "Victor Bolaños Guerra"
+    subtitle = "Internet Infrastructure & Peering Engineer · MANRS Steering Committee"
+
+    [[params.profileMode.buttons]]
+      name = "CV"
+      url = "/cv/"
+    [[params.profileMode.buttons]]
+      name = "Blog"
+      url = "/blog/"
+
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/victorbguerra/"
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/vitokosk8"
+  [[params.socialIcons]]
+    name = "rss"
+    url = "/index.xml"
+
+[menu]
+  [[menu.main]]
+    name = "CV"
+    url = "/cv/"
+    weight = 10
+  [[menu.main]]
+    name = "Blog"
+    url = "/blog/"
+    weight = 20
+  [[menu.main]]
+    name = "Etiquetas"
+    url = "/tags/"
+    weight = 30
