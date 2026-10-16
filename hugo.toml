@@ -1,32 +1,27 @@
-baseURL = "https://ea8djl.com/"
+baseURL = "https://ea8djl.com/blog/"
 locale = "es-es"
-title = "EA8DJL · Victor Bolaños Guerra"
+title = "Blog · EA8DJL"
 theme = "PaperMod"
-enableRobotsTXT = true
+enableRobotsTXT = false
 
 [pagination]
   pagerSize = 10
 
+[permalinks]
+  posts = "/:slug/"
+
 [params]
   env = "production"
   defaultTheme = "auto"
-  mainSections = ["blog"]
+  mainSections = ["posts"]
   ShowReadingTime = true
   ShowPostNavLinks = true
   ShowCodeCopyButtons = true
   ShowBreadCrumbs = true
 
-  [params.profileMode]
-    enabled = true
-    title = "Victor Bolaños Guerra"
-    subtitle = "Internet Infrastructure & Peering Engineer · MANRS Steering Committee"
-
-    [[params.profileMode.buttons]]
-      name = "CV"
-      url = "/cv/"
-    [[params.profileMode.buttons]]
-      name = "Blog"
-      url = "/blog/"
+  [params.homeInfoParams]
+    Title = "Blog"
+    Content = "Historias de redes, formación e Internet."
 
   [[params.socialIcons]]
     name = "linkedin"
@@ -36,18 +31,14 @@ enableRobotsTXT = true
     url = "https://github.com/vitokosk8"
   [[params.socialIcons]]
     name = "rss"
-    url = "/index.xml"
+    url = "https://ea8djl.com/blog/index.xml"
 
 [menu]
   [[menu.main]]
-    name = "CV"
-    url = "/cv/"
+    name = "Inicio"
+    url = "https://ea8djl.com/"
     weight = 10
   [[menu.main]]
-    name = "Blog"
-    url = "/blog/"
-    weight = 20
-  [[menu.main]]
     name = "Etiquetas"
-    url = "/tags/"
-    weight = 30
+    pageRef = "/tags"
+    weight = 20

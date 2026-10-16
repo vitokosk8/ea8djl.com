@@ -39,4 +39,4 @@ jobs:
           rsync -avz --delete \
             --exclude='.well-known/' --exclude='cgi-bin/' \
             -e "ssh -p ${{ secrets.SSH_PORT }}" \
-            public/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:public_html/
+            public/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:public_html/blog/
