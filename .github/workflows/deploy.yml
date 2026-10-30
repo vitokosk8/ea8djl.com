@@ -40,3 +40,13 @@ jobs:
             --exclude='.well-known/' --exclude='cgi-bin/' \
             -e "ssh -p ${{ secrets.SSH_PORT }}" \
             public/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:public_html/blog/
+
+      - name: Vaciar caché de Cloudflare
+        env:
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          CF_ZONE_ID: ${{ secrets.CF_ZONE_ID }}
+        run: |
+          curl -fsS -X POST "https://api.cloudflare.com/client/v4/zones/$CF_ZONE_ID/purge_cache" \
+            -H "Authorization: Bearer $CF_API_TOKEN" \
+            -H "Content-Type: application/json" \
+            --data '{"purge_everything":true}' | grep -q '"success":true'
