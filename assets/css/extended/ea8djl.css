@@ -1,0 +1,142 @@
+/* ===========================================================
+   EA8DJL — tema del blog a juego con la landing
+   PaperMod carga automáticamente cualquier CSS de assets/css/extended/
+   =========================================================== */
+
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("/fonts/bricolage-grotesque-latin-wght-normal.woff2") format("woff2");
+  font-weight: 200 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url("/fonts/ibm-plex-sans-latin-400-normal.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url("/fonts/ibm-plex-sans-latin-500-normal.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url("/fonts/ibm-plex-sans-latin-600-normal.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+
+/* --- Paleta de la landing --- */
+.dark,
+:root {
+  --ocean: #0f2d40;
+  --ocean-raised: #163b52;
+  --line: #2a5269;
+  --sand: #e3c291;
+  --foam: #eef3f1;
+  --mist: #a3b9c2;
+  --tide: #4fa3a5;
+
+  --gap: 24px;
+  --content-gap: 20px;
+  --radius: 10px;
+
+  --theme: var(--ocean);
+  --entry: var(--ocean-raised);
+  --primary: var(--foam);
+  --secondary: var(--mist);
+  --tertiary: var(--line);
+  --content: var(--foam);
+  --code-block-bg: #0b2230;
+  --code-bg: var(--ocean-raised);
+  --border: var(--line);
+}
+
+/* Forzamos tema oscuro: el sitio es oscuro en los dos modos */
+body {
+  background: var(--ocean);
+  color: var(--foam);
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+}
+
+/* --- Tipografía --- */
+h1, h2, h3, h4, h5,
+.entry-header h1,
+.post-title,
+.post-entry h1, .post-entry h2, .post-entry h3 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 600;
+  color: var(--foam);
+  letter-spacing: -0.01em;
+}
+
+.main { color: var(--foam); }
+
+/* --- Cabecera / nav --- */
+.nav { border-bottom: 1px solid var(--line); }
+.logo a { color: var(--sand) !important; font-family: "Bricolage Grotesque", sans-serif; }
+#menu a { color: var(--mist); }
+#menu a:hover,
+#menu .active { color: var(--sand); border-bottom-color: var(--sand); }
+.logo-switches .theme-toggle svg { color: var(--mist); }
+
+/* --- Portada / perfil --- */
+.first-entry .entry-header h1 { color: var(--foam); }
+.first-entry .entry-content { color: var(--mist); }
+
+/* --- Tarjetas de entradas --- */
+.post-entry {
+  background: var(--ocean-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.post-entry:hover { border-color: var(--sand); }
+.entry-hint,
+.entry-footer { color: var(--mist); }
+
+/* --- Enlaces --- */
+a { color: var(--sand); }
+.post-content a {
+  color: var(--sand);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+.post-content a:hover { text-decoration-thickness: 2px; }
+
+/* --- Entrada individual --- */
+.post-title { color: var(--foam); }
+.post-meta,
+.post-meta a { color: var(--mist); }
+.post-content { color: var(--foam); }
+.post-content blockquote {
+  border-inline-start-color: var(--tide);
+  color: var(--mist);
+}
+
+/* Código */
+.post-content code {
+  background: var(--ocean-raised);
+  color: var(--sand);
+}
+.post-content pre,
+.post-content pre code { background: var(--code-block-bg); color: var(--foam); }
+.chroma { background: var(--code-block-bg); }
+
+/* Etiquetas */
+.post-tags a,
+.terms-tags a {
+  background: var(--ocean-raised);
+  border: 1px solid var(--line);
+  color: var(--mist);
+}
+.post-tags a:hover,
+.terms-tags a:hover { border-color: var(--sand); color: var(--sand); }
+
+/* --- Pie --- */
+.footer { color: var(--mist); border-top: 1px solid var(--line); }
+.footer a { color: var(--sand); }
+
+/* --- Botón "ir arriba" --- */
+.top-link { background: var(--ocean-raised); color: var(--sand); }
