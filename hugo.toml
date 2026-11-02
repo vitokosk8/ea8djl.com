@@ -1,8 +1,10 @@
 baseURL = "https://ea8djl.com/blog/"
-locale = "es-es"
 title = "Blog · EA8DJL"
 theme = "PaperMod"
 enableRobotsTXT = false
+
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
 
 [pagination]
   pagerSize = 10
@@ -19,10 +21,6 @@ enableRobotsTXT = false
   ShowCodeCopyButtons = true
   ShowBreadCrumbs = true
 
-  [params.homeInfoParams]
-    Title = "Blog"
-    Content = "Historias de redes, formación e Internet."
-
   [[params.socialIcons]]
     name = "linkedin"
     url = "https://www.linkedin.com/in/victorbguerra/"
@@ -33,12 +31,45 @@ enableRobotsTXT = false
     name = "rss"
     url = "https://ea8djl.com/blog/index.xml"
 
-[menu]
-  [[menu.main]]
-    name = "Inicio"
-    url = "https://ea8djl.com/"
-    weight = 10
-  [[menu.main]]
-    name = "Etiquetas"
-    pageRef = "/tags"
-    weight = 20
+[languages]
+
+  [languages.en]
+    languageName = "English"
+    languageCode = "en-GB"
+    weight = 1
+    [languages.en.params.homeInfoParams]
+      Title = "Blog"
+      Content = "Stories on networks, training and the Internet."
+    [[languages.en.menu.main]]
+      name = "Home"
+      url = "https://ea8djl.com/"
+      weight = 10
+    [[languages.en.menu.main]]
+      name = "Español"
+      url = "https://ea8djl.com/blog/es/"
+      weight = 20
+    [[languages.en.menu.main]]
+      name = "Tags"
+      pageRef = "/tags"
+      weight = 30
+
+  [languages.es]
+    languageName = "Español"
+    languageCode = "es-ES"
+    contentDir = "content/es"
+    weight = 2
+    [languages.es.params.homeInfoParams]
+      Title = "Blog"
+      Content = "Historias de redes, formación e Internet."
+    [[languages.es.menu.main]]
+      name = "Inicio"
+      url = "https://ea8djl.com/"
+      weight = 10
+    [[languages.es.menu.main]]
+      name = "English"
+      url = "https://ea8djl.com/blog/"
+      weight = 20
+    [[languages.es.menu.main]]
+      name = "Etiquetas"
+      pageRef = "/tags"
+      weight = 30
